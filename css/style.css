@@ -1,0 +1,321 @@
+:root {
+
+
+    --altura-campos: 40px;
+    --active-input-border: hsl(278, 94%, 30%);
+    --input-errors: hsl(0, 100%, 66%);
+    --white: hsl(0, 0%, 100%);
+    --violeta: hsl(270, 3%, 87%);
+    --escuro-violeta: hsl(279, 6%, 55%);
+    --bt-confirmar: hsl(278, 68%, 11%);
+
+}
+
+body {
+
+    display: flex;
+    flex-direction: row;
+    gap: 80px;
+    background-image: url(../images/bg-main-desktop.png);
+    background-position: left;
+    background-repeat: no-repeat;
+    align-items: center;
+    padding-left: 200px;
+    padding-right: 10px;
+    height: 100vh;
+    width: 100vh;
+    font-size: 12px;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.cards {
+
+    display: flex;
+    flex-direction: column;
+    height: 600px;
+    width: 800px;
+    gap: 10px;
+}
+
+.card-front {
+
+    display: flex;
+    flex-direction: column;
+    background-image: url(../images/bg-card-front.png);
+    background-size: cover;
+    border-radius: 10px;
+    padding: 10px;
+    padding-top: 110px;
+    padding-left: 30px;
+    gap: 10px;
+    width: 360px;
+    height: 200px;
+    color: var(--white);
+}
+
+.logo-card {
+    display: flex;
+    position: absolute;
+    transform: translate(0px, -85px);
+    width: 76px;
+    height: 40px;
+}
+
+.linha-cartao {
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+}
+
+.card-back {
+
+    display: flex;
+    background-image: url(../images/bg-card-back.png);
+    background-size: cover;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 100px;
+    width: 360px;
+    height: 200px;
+    color: var(--white);
+    padding-left: 250px;
+}
+
+.formulario-e-complete-state {
+
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    width: 400px;
+    padding-top: 20px;
+    margin-left: 50px;
+
+}
+
+.div-formulario {
+
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    gap: 10px;
+}
+
+.card-holder-name-campo {
+
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+ 
+}
+
+.card-holder-name {
+
+    height: var(--altura-campos);
+    border-radius: 5px;
+    width: 100%;
+}
+
+.card-number-campo {
+
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+
+}
+
+.card-number {
+
+    height: var(--altura-campos);
+    width: 100%;
+    border-radius: 5px;
+
+}
+
+.inputs-datas {
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 300px;
+    height: 120px;
+  
+}
+
+.inputs-mes-ano {
+
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: 90px;
+    gap: 15px;
+}
+
+.title-mes-ano-campo{
+
+    display: flex;
+    flex-direction: row;
+}
+
+
+.campos-mes-ano {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: left;
+    width: 100%;
+    gap: 25px;
+}
+
+.campo-mes,
+.campo-ano {
+
+    display: flex;
+    flex-direction: column;
+    height: var(--altura-campos + 50px);
+    width: 60px;
+}
+
+.mounth-input {
+
+    width: 80px;
+    height: var(--altura-campos);
+    display: flex;
+    border-radius: 5px;
+}
+
+.year-input {
+
+    display: flex;
+    width: 80px;
+    height: var(--altura-campos);
+    border-radius: 5px;
+}
+
+
+.input-cvc-campo {
+
+    display: flex;
+    flex-direction: column;
+    width: 100px;
+    height: var(--altura-campos + 50px);
+    
+}
+
+.input-cvc-campo div{
+
+    margin-top: 15px;
+
+}
+
+.input-cvc {
+
+    height: var(--altura-campos);
+    width: 80px;
+    display: flex;
+    border-radius: 5px;
+    
+}
+
+.botao-confirmar {
+
+    height: var(--altura-campos);
+    width: 100%;
+    border-radius: 5px;
+    background-color: var(--bt-confirmar);
+    color: var(--white);
+   
+}
+
+.complete-state-start {
+
+    display: none;
+}
+
+.complete-state-start.open {
+
+    display: flex;
+    flex-direction: column;
+    background: none;
+    gap: 20px;
+    width: 400px;
+    height: 100%;
+    align-items: center;
+    justify-content: top;
+}
+
+.complete-state-start.open h1 {
+    color: var(--active-input-border);
+}
+
+.complete-state-start.open p {
+    color: var(--escuro-violeta);
+}
+
+.complete-state-start.open input {
+    background-color: var(--bt-confirmar);
+    color: var(--white);
+    height: var(--altura-campos);
+    width: 90%;
+    border-radius: 5px;
+}
+
+.imagem-bt-confirmar {
+
+    width: 100px;
+    height: 100px;
+}
+
+.entrada {
+
+    border: solid 1px var(--violeta);
+    cursor: grab;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+}
+
+.entrada.negative {
+
+    border: solid 1px var(--input-errors);
+}
+
+.entrada.correct {
+
+    border: solid 1px var(--active-input-border);
+}
+
+.aviso {
+
+    color: var(--input-errors);
+    font-size: 9px;
+    height: 12px;
+    width: 100px;
+    display: flex;
+    flex-wrap: nowrap;
+    z-index: 1;
+}
+
+.card-number-render{
+ 
+    width: 320px;
+    height: 35px;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.card-holder-name-render{
+
+    width: 138.22px;
+    height: 23px;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.card-date-render{
+
+    width: 53.27px;
+    height: 23px;
+    font-family: 'Space Grotesk', sans-serif;
+}
